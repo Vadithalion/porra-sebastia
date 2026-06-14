@@ -105,6 +105,50 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+    // Endpoint de administrador
+    if (req.url === '/api/admin/update' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk.toString());
+        req.on('end', () => {
+            try {
+                const payload = JSON.parse(body);
+                
+                // CÓDIGO SECRETO (puedes cambiarlo si quieres)
+                if (payload.code !== 'admin123') {
+                    res.writeHead(403, { 'Content-Type': 'application/json' });
+                    return res.end(JSON.stringify({ error: 'Código incorrecto' }));
+                }
+
+                const dataStr = fs.readFileSync(DATA_FILE, 'utf8');
+                const data = JSON.parse(dataStr);
+                
+                if (payload.action === 'updateMatch') {
+                    const match = data.matches.find(m => m.id === payload.matchId);
+                    if (match) {
+                        match.finalHomeScore = payload.finalHomeScore === '' || payload.finalHomeScore === null ? null : parseInt(payload.finalHomeScore);
+                        match.finalAwayScore = payload.finalAwayScore === '' || payload.finalAwayScore === null ? null : parseInt(payload.finalAwayScore);
+                    }
+                } else if (payload.action === 'deleteBet') {
+                    if (data.bets[payload.matchId]) {
+                        data.bets[payload.matchId].splice(payload.betIndex, 1);
+                    }
+                } else if (payload.action === 'editBet') {
+                    if (data.bets[payload.matchId] && data.bets[payload.matchId][payload.betIndex]) {
+                        data.bets[payload.matchId][payload.betIndex] = payload.newBet;
+                    }
+                }
+
+                fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: true, data: data }));
+            } catch (e) {
+                res.writeHead(400);
+                res.end(JSON.stringify({ error: 'Invalid request' }));
+            }
+        });
+        return;
+    }
+
     // Servir archivos estáticos (HTML, CSS, JS)
     let filePath = req.url === '/' ? '/index.html' : req.url;
     filePath = path.join(__dirname, filePath);
@@ -131,8 +175,7 @@ server.listen(PORT, () => {
     console.log(`\n=================================================`);
     console.log(`🚀 Servidor de la Porra iniciado correctamente`);
     console.log(`=================================================`);
-    console.log(`📍 Abre en este ordenador: http://localhost:${PORT}`);
-    console.log(`🌐 Para que otros ordenadores accedan, comparte la IP de este equipo por el puerto ${PORT}`);
-    console.log(`   (Ejemplo: http://192.168.1.XX:${PORT})`);
+    console.log(`📍 Web pública: http://localhost:${PORT}`);
+    console.log(`🔐 Panel Admin: http://localhost:${PORT}/admin.html`);
     console.log(`=================================================\n`);
 });

@@ -111,11 +111,19 @@ function renderMatches() {
         if (isOpen) {
             formHtml = `
                 <form class="betting-form" onsubmit="placeBet(event, ${match.id})">
-                    <input type="text" id="name-${match.id}" placeholder="Tu nombre" required>
-                    <input type="email" id="email-${match.id}" placeholder="Tu email" required>
-                    <input type="number" id="home-${match.id}" placeholder="${match.homeTeam.substring(0, 3)}" min="0" required>
-                    <span class="score-divider">-</span>
-                    <input type="number" id="away-${match.id}" placeholder="${match.awayTeam.substring(0, 3)}" min="0" required>
+                    <div class="form-row">
+                        <input type="text" id="name-${match.id}" placeholder="Tu nombre" required>
+                        <input type="email" id="email-${match.id}" placeholder="Tu email" required>
+                    </div>
+                    <div class="scores-container">
+                        <span class="team-name">${match.homeTeam}</span>
+                        <span></span>
+                        <span class="team-name">${match.awayTeam}</span>
+                        
+                        <input type="number" class="score-input" id="home-${match.id}" placeholder="${match.homeTeam.substring(0, 3)}" min="0" required>
+                        <span class="score-divider">-</span>
+                        <input type="number" class="score-input" id="away-${match.id}" placeholder="${match.awayTeam.substring(0, 3)}" min="0" required>
+                    </div>
                     <button type="submit">Apostar 1€</button>
                 </form>
             `;

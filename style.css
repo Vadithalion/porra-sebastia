@@ -249,7 +249,8 @@ main {
     box-shadow: 0 0 0 3px var(--bg-light);
 }
 
-.betting-form input[type="text"] {
+.betting-form input[type="text"],
+.betting-form input[type="email"] {
     flex: 1;
     min-width: 120px;
 }

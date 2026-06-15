@@ -1,7 +1,7 @@
 // Estado de la aplicación
 let matches = [];
 let bets = {};
-let previousPot = 0;
+let previousPot = 0; // Bote acumulado de partidos anteriores al primer partido activo
 
 // Cargar datos desde el servidor en lugar de localStorage
 async function loadData() {
@@ -14,7 +14,6 @@ async function loadData() {
             previousPot = data.pot || 0;
             renderSidebar();
             renderMatches();
-            updatePotDisplay();
         }
     } catch (error) {
         console.error("Error al cargar los datos del servidor:", error);
@@ -22,25 +21,56 @@ async function loadData() {
     }
 }
 
-function updatePotDisplay() {
-    let currentBetsCount = 0;
-    for (let matchId in bets) {
-        currentBetsCount += bets[matchId].length;
-    }
-    const totalPot = previousPot + currentBetsCount; // 1€ por apuesta
-    document.getElementById('total-pot').textContent = totalPot;
+/**
+ * Calcula el bote de cada partido en orden:
+ * - El bote del partido N = sus apostantes propios
+ *   + bote acumulado (previousPot + suma de botes de partidos previos sin acertante)
+ *
+ * Devuelve un objeto { matchId: potAmount }
+ */
+function computeMatchPots() {
+    const pots = {};
+    let accumulatedPot = previousPot; // bote previo guardado en JSON
+
+    matches.forEach(match => {
+        const matchBets = bets[match.id] || [];
+        const ownPot = matchBets.length; // 1€ por apuesta
+
+        const isFinished = match.finalHomeScore !== null && match.finalAwayScore !== null;
+
+        // El bote disponible para este partido = lo propio + lo acumulado
+        pots[match.id] = ownPot + accumulatedPot;
+
+        // Si el partido terminó sin acertante, su bote completo pasa al siguiente
+        if (isFinished) {
+            const hasWinner = matchBets.some(
+                bet => bet.homeScore === match.finalHomeScore && bet.awayScore === match.finalAwayScore
+            );
+            if (!hasWinner) {
+                accumulatedPot += ownPot; // el bote pasa al siguiente
+            } else {
+                accumulatedPot = 0; // hubo ganador, se reinicia
+            }
+        }
+        // Si el partido no ha terminado, el bote no se acumula aún
+    });
+
+    return pots;
 }
 
 function renderSidebar() {
     const nav = document.getElementById('sidebar-nav');
+    const matchPots = computeMatchPots();
     let navHtml = '<ul class="sidebar-nav-list">';
 
     matches.forEach(match => {
+        const pot = matchPots[match.id] || 0;
         navHtml += `
             <li>
                 <a href="#match-${match.id}" class="sidebar-link">
                     ${match.homeTeam} vs ${match.awayTeam}
                     <span class="sidebar-date">${match.shortDate} - ${match.date.split('T')[1].substring(0, 5)}</span>
+                    <span class="sidebar-pot">🏆 ${pot}€</span>
                 </a>
             </li>
         `;
@@ -64,6 +94,7 @@ function renderMatches() {
     container.innerHTML = '';
 
     const now = new Date();
+    const matchPots = computeMatchPots();
 
     matches.forEach(match => {
         const matchDate = new Date(match.date);
@@ -73,6 +104,9 @@ function renderMatches() {
         const card = document.createElement('div');
         card.className = 'match-card';
         card.id = `match-${match.id}`;
+
+        const pot = matchPots[match.id] || 0;
+        const betCount = bets[match.id] ? bets[match.id].length : 0;
 
         let betsHtml = '';
         if (!bets[match.id] || bets[match.id].length === 0) {
@@ -161,10 +195,20 @@ function renderMatches() {
                     </div>
                     <div class="countdown" id="countdown-${match.id}" style="${isFinished ? 'font-size: 1rem;' : ''}">${countdownText}</div>
                 </div>
+                <div class="match-pot-banner">
+                    <div class="pot-info">
+                        <span class="pot-icon">🏆</span>
+                        <div class="pot-details">
+                            <span class="pot-banner-label">Bote del Partido</span>
+                            <span class="pot-banner-amount">${pot}€</span>
+                        </div>
+                    </div>
+                    <div class="pot-bets-count">${betCount} apuesta${betCount !== 1 ? 's' : ''}</div>
+                </div>
             </div>
             <div class="match-body">
                 ${formHtml}
-                <h3>Apuestas (${bets[match.id] ? bets[match.id].length : 0})</h3>
+                <h3>Apuestas (${betCount})</h3>
                 ${betsHtml}
             </div>
         `;
@@ -206,7 +250,7 @@ window.placeBet = async function (event, matchId) {
         if (response.ok) {
             const result = await response.json();
             bets = result.data.bets;
-            updatePotDisplay();
+            renderSidebar();
             renderMatches();
         } else {
             alert("Error al registrar la apuesta.");
@@ -255,6 +299,7 @@ function updateCountdowns() {
     });
 
     if (needsRerender) {
+        renderSidebar();
         renderMatches();
     }
 }

@@ -41,29 +41,11 @@ h1 {
     letter-spacing: -0.5px;
 }
 
-.pot-container {
-    background-color: rgba(255,255,255,0.1);
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.pot-label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.9;
-}
-
-.pot-amount {
-    font-weight: 700;
-    color: var(--complementary);
-    font-size: 2rem;
-    line-height: 1;
-    margin-top: 0.25rem;
+.header-subtitle {
+    font-size: 1rem;
+    opacity: 0.85;
+    font-style: italic;
+    letter-spacing: 0.2px;
 }
 
 .app-layout {
@@ -131,6 +113,18 @@ h1 {
     margin-top: 0.25rem;
 }
 
+.sidebar-pot {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--complementary);
+    background: rgba(201,140,91,0.12);
+    border: 1px solid rgba(201,140,91,0.3);
+    border-radius: 6px;
+    padding: 0.15rem 0.5rem;
+}
+
 main {
     flex: 1;
     display: grid;
@@ -163,6 +157,60 @@ main {
     flex-direction: column;
     gap: 1rem;
     border-bottom: 1px solid rgba(56, 91, 148, 0.1);
+}
+
+/* Pot banner inside each match card */
+.match-pot-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #c98c5b, #e8a96a);
+    border-radius: 10px;
+    padding: 0.75rem 1.1rem;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(201,140,91,0.25);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.pot-info {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.pot-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+}
+
+.pot-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.pot-banner-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+.pot-banner-amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.pot-bets-count {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    font-weight: 600;
+    text-align: right;
 }
 
 .match-info h2 {

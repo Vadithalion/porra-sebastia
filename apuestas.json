@@ -39,9 +39,143 @@
         "email": "ivadillo@sebastia-abogados.com",
         "homeScore": 2,
         "awayScore": 0
+      },
+      {
+        "name": "Maria Jose",
+        "email": "mjose@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "JIMMER",
+        "email": "jimmer@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "Javier",
+        "email": "javier@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "Clara",
+        "email": "clara@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 0
+      },
+      {
+        "name": "MIGUEL",
+        "email": "miguel@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 1
+      },
+      {
+        "name": "MARIO",
+        "email": "mario@sebastia-abogados.com",
+        "homeScore": 5,
+        "awayScore": 0
+      },
+      {
+        "name": "yolanda",
+        "email": "yolanda@sebastia-abogados.com",
+        "homeScore": 0,
+        "awayScore": 0
+      },
+      {
+        "name": "Rosa",
+        "email": "rosa@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 1
+      },
+      {
+        "name": "KARINA",
+        "email": "karina.suarez@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "Ana",
+        "email": "ana@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "ESTHER",
+        "email": "esther@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "Dalila",
+        "email": "dalila@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 2
       }
     ],
-    "2": [],
-    "3": []
+    "2": [
+      {
+        "name": "Javier",
+        "email": "javier@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "ESTHER",
+        "email": "esther@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 1
+      },
+      {
+        "name": "Rosa",
+        "email": "rosa@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "name": "Ana",
+        "email": "ana@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "name": "Dalila",
+        "email": "dalila@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      }
+    ],
+    "3": [
+      {
+        "name": "Javier",
+        "email": "javier@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "ESTHER",
+        "email": "esther@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 2
+      },
+      {
+        "name": "Rosa",
+        "email": "rosa@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "Ana",
+        "email": "ana@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 3
+      },
+      {
+        "name": "Dalila",
+        "email": "dalila@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 3
+      }
+    ]
   }
 }

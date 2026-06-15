@@ -88,7 +88,19 @@ const server = http.createServer((req, res) => {
                 if (!data.bets[matchId]) {
                     data.bets[matchId] = [];
                 }
-                
+
+                // Comprobar si el email ya tiene apuesta en este partido
+                const emailLower = (bet.email || '').toLowerCase().trim();
+                const alreadyBet = data.bets[matchId].some(
+                    b => b.email.toLowerCase().trim() === emailLower
+                );
+
+                if (alreadyBet) {
+                    res.writeHead(409, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: 'duplicate_email' }));
+                    return;
+                }
+
                 // Añadir la nueva apuesta
                 data.bets[matchId].push(bet);
                 

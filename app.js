@@ -217,6 +217,30 @@ function renderMatches() {
     });
 }
 
+/**
+ * Muestra un mensaje de error inline dentro del formulario del partido indicado.
+ * Se elimina automáticamente a los 6 segundos.
+ */
+function showBetError(matchId, message) {
+    // Eliminar error anterior si existe
+    const old = document.getElementById(`bet-error-${matchId}`);
+    if (old) old.remove();
+
+    const form = document.querySelector(`#match-${matchId} .betting-form`);
+    if (!form) {
+        alert(message);
+        return;
+    }
+
+    const errorDiv = document.createElement('div');
+    errorDiv.id = `bet-error-${matchId}`;
+    errorDiv.className = 'bet-error-msg';
+    errorDiv.textContent = message;
+    form.appendChild(errorDiv);
+
+    setTimeout(() => errorDiv.remove(), 6000);
+}
+
 window.placeBet = async function (event, matchId) {
     event.preventDefault();
     const nameInput = document.getElementById(`name-${matchId}`);
@@ -252,10 +276,14 @@ window.placeBet = async function (event, matchId) {
             bets = result.data.bets;
             renderSidebar();
             renderMatches();
-        } else {
-            alert("Error al registrar la apuesta.");
+        } else if (response.status === 409) {
+            showBetError(matchId, '⚠️ Ya has introducido una apuesta para este partido. Para modificarla, habla con Iñigo.');
             button.disabled = false;
-            button.textContent = "Apostar 1€";
+            button.textContent = 'Apostar 1€';
+        } else {
+            alert('Error al registrar la apuesta.');
+            button.disabled = false;
+            button.textContent = 'Apostar 1€';
         }
     } catch (error) {
         console.error("Error:", error);

@@ -1,0 +1,437 @@
+{
+  "pot": 0,
+  "matches": [
+    {
+      "id": 1,
+      "homeTeam": "España",
+      "awayTeam": "Cabo Verde",
+      "date": "2026-06-15T18:00:00+02:00",
+      "displayDate": "Lunes 15, 18:00",
+      "shortDate": "15 Jun",
+      "finalHomeScore": 0,
+      "finalAwayScore": 0
+    },
+    {
+      "id": 2,
+      "homeTeam": "España",
+      "awayTeam": "Arabia Saudita",
+      "date": "2026-06-19T14:30:00+02:00",
+      "displayDate": "Domingo 21, 18:00",
+      "shortDate": "21 Jun",
+      "finalHomeScore": 4,
+      "finalAwayScore": 0
+    },
+    {
+      "id": 3,
+      "homeTeam": "Uruguay",
+      "awayTeam": "España",
+      "date": "2026-06-26T14:00:00+02:00",
+      "displayDate": "Sábado 27, 02:00",
+      "shortDate": "27 Jun",
+      "finalHomeScore": null,
+      "finalAwayScore": null
+    },
+    {
+      "id": 4,
+      "homeTeam": "Uruguay",
+      "awayTeam": "España",
+      "date": "2026-06-26T14:00:00+02:00",
+      "displayDate": "Sábado 27, 02:00",
+      "shortDate": "27 Jun",
+      "finalHomeScore": null,
+      "finalAwayScore": null
+    }
+  ],
+  "bets": {
+    "1": [
+      {
+        "name": "Iñigo",
+        "email": "ivadillo@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "Maria Jose",
+        "email": "mjose@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "JIMMER",
+        "email": "jimmer@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "Javier",
+        "email": "javier@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "Clara",
+        "email": "clara@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 0
+      },
+      {
+        "name": "MIGUEL",
+        "email": "miguel@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 1
+      },
+      {
+        "name": "MARIO",
+        "email": "mario@sebastia-abogados.com",
+        "homeScore": 5,
+        "awayScore": 0
+      },
+      {
+        "name": "yolanda",
+        "email": "yolanda@sebastia-abogados.com",
+        "homeScore": 0,
+        "awayScore": 0
+      },
+      {
+        "name": "Rosa",
+        "email": "rosa@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 1
+      },
+      {
+        "name": "KARINA",
+        "email": "karina.suarez@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "Ana",
+        "email": "ana@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "ESTHER",
+        "email": "esther@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "Dalila",
+        "email": "dalila@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 2
+      },
+      {
+        "name": "Alejandro Sánchez",
+        "email": "alejandro@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 0
+      },
+      {
+        "name": "Alfonso",
+        "email": "alfonso@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "Mer",
+        "email": "mer@sebastia-abogados.com",
+        "homeScore": 6,
+        "awayScore": 0
+      },
+      {
+        "name": "Fernando",
+        "email": "fernando@sebastia-abogados.com",
+        "homeScore": 7,
+        "awayScore": 0
+      },
+      {
+        "name": "Patri jurídico",
+        "email": "patriciasm@sebastia-abogados.com",
+        "homeScore": 6,
+        "awayScore": 0
+      },
+      {
+        "name": "Kilian",
+        "email": "kilian@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "EVA",
+        "email": "eva@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 1
+      },
+      {
+        "name": "Tamara",
+        "email": "tamaralp08@gmail.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "Anita",
+        "email": "ana19765@gmail.com",
+        "homeScore": 3,
+        "awayScore": 1
+      }
+    ],
+    "2": [
+      {
+        "name": "Javier",
+        "email": "javier@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "ESTHER",
+        "email": "esther@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 1
+      },
+      {
+        "name": "Rosa",
+        "email": "rosa@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "name": "Ana",
+        "email": "ana@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "name": "Dalila",
+        "email": "dalila@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "Fernando",
+        "email": "fernando@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "Kilian",
+        "email": "kilian@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 1
+      },
+      {
+        "name": "Tamara",
+        "email": "tamaralp08@gmail.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "MIGUEL",
+        "email": "miguel@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 2
+      },
+      {
+        "name": "Mario",
+        "email": "mario@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "Clara",
+        "email": "clara@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 0
+      },
+      {
+        "name": "Mer",
+        "email": "mer@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "jimmer",
+        "email": "jimmer@sebastia-abogados.com",
+        "homeScore": 4,
+        "awayScore": 0
+      },
+      {
+        "name": "Iñigo",
+        "email": "ivadillo@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "name": "Anita",
+        "email": "ana19765@gmail.com",
+        "homeScore": 2,
+        "awayScore": 0
+      },
+      {
+        "name": "MJ",
+        "email": "mjose@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "name": "Patri jur´ídico",
+        "email": "patriciasm@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 1
+      },
+      {
+        "name": "alfonso",
+        "email": "alfonso@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 1
+      },
+      {
+        "name": "yolanda",
+        "email": "yolanda@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "name": "EVA",
+        "email": "eva@sebastia-abogados.com",
+        "homeScore": 3,
+        "awayScore": 0
+      },
+      {
+        "name": "Alejandro",
+        "email": "alejandro@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 0
+      },
+      {
+        "name": "KARINA",
+        "email": "karina.suarez@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 0
+      }
+    ],
+    "3": [
+      {
+        "name": "Javier",
+        "email": "javier@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "ESTHER",
+        "email": "esther@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 2
+      },
+      {
+        "name": "Rosa",
+        "email": "rosa@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "Ana",
+        "email": "ana@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 3
+      },
+      {
+        "name": "Dalila",
+        "email": "dalila@sebastia-abogados.com",
+        "homeScore": 2,
+        "awayScore": 3
+      },
+      {
+        "name": "Fernando",
+        "email": "fernando@sebastia-abogados.com",
+        "homeScore": 0,
+        "awayScore": 4
+      },
+      {
+        "name": "Kilian",
+        "email": "kilian@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "Tamara",
+        "email": "tamaralp08@gmail.com",
+        "homeScore": 2,
+        "awayScore": 3
+      },
+      {
+        "name": "mer",
+        "email": "mer@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "jimmer",
+        "email": "jimmer@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "MIGUEL",
+        "email": "miguel@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 3
+      },
+      {
+        "name": "MARIO",
+        "email": "mario@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 3
+      },
+      {
+        "name": "Anita",
+        "email": "ana19765@gmail.com",
+        "homeScore": 2,
+        "awayScore": 3
+      },
+      {
+        "name": "Maria Jose",
+        "email": "mjose@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 3
+      },
+      {
+        "name": "Patri juridico",
+        "email": "patriciasm@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 3
+      },
+      {
+        "name": "CLARA",
+        "email": "clara@sebastia-abogados.com",
+        "homeScore": 0,
+        "awayScore": 2
+      },
+      {
+        "name": "yolanda",
+        "email": "yolanda@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 3
+      },
+      {
+        "name": "Claudia",
+        "email": "claudia@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 3
+      },
+      {
+        "name": "EVA",
+        "email": "eva@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      },
+      {
+        "name": "KARINA",
+        "email": "karina.suarez@sebastia-abogados.com",
+        "homeScore": 1,
+        "awayScore": 2
+      }
+    ]
+  }
+}
